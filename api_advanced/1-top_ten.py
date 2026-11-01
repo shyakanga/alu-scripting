@@ -8,9 +8,13 @@ def top_ten(subreddit):
     headers = {
         "User-Agent": "api.advanced:anything (by /u/shyakacarrick)"
     }
+    params = {
+        "limit": 10
+    }
     response = requests.get(
         url,
         headers=headers,
+        params=params,
         allow_redirects=False
     )
 
